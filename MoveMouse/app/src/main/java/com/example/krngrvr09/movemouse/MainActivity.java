@@ -223,9 +223,21 @@ public class MainActivity extends ActionBarActivity implements
                 mHandler.sendMessage(msg);
 
                 return true;
-            case KeyEvent.KEYCODE_BACK:
+            case KeyEvent.KEYCODE_DEL:
 
                 msg.obj = "keycode_backspace";
+                mHandler.sendMessage(msg);
+
+                return true;
+            case KeyEvent.KEYCODE_PERIOD:
+
+                msg.obj = "keycode_dot";
+                mHandler.sendMessage(msg);
+
+                return true;
+            case KeyEvent.KEYCODE_SPACE:
+
+                msg.obj = "keycode_space";
                 mHandler.sendMessage(msg);
 
                 return true;
@@ -253,27 +265,8 @@ public class MainActivity extends ActionBarActivity implements
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     public boolean onSingleTapConfirmed(MotionEvent e) {

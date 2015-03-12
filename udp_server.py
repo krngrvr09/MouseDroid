@@ -25,7 +25,20 @@ while True:
     if "keycode" in data:
         print "pressing the key"
         which_key = data.split("_")[1]
-        k.tap_key(which_key)
+        if(which_key=="enter"):
+            print "pressing enter"
+            k.tap_key("Return")
+        elif(which_key=="dot"):
+            print "pressing dot"
+            k.tap_key(".")
+        elif(which_key=="backspace"):
+            print "pressing backspace"
+            k.tap_key("BackSpace")
+        elif(which_key=="enter"):
+            print "pressing space"
+            k.tap_key(" ")
+        else:
+            k.tap_key(which_key)
     elif "click" in data:
         print "clicking"
         m.click(cur_pos_x,cur_pos_y);
