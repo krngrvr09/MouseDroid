@@ -1,7 +1,6 @@
 import socket
 import sys
 import re
-import autopy
 from pymouse import PyMouse
 from pykeyboard import PyKeyboard
 # Create a TCP/IP socket
