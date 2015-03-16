@@ -9,7 +9,7 @@ k= PyKeyboard()
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # Bind the socket to the port
-server_address = ('192.168.1.5', 10000)
+server_address = ('192.168.54.217', 10000)
 print >>sys.stderr, 'starting up on %s port %s' % server_address
 sock.bind(server_address)
 
@@ -50,17 +50,19 @@ while True:
         print "right clicking"
         m.click(cur_pos_x,cur_pos_y,3);
     else:
+    	data=data.replace("E-","")
         x_coord = data.split(";")[0]
         y_coord = data.split(";")[1]
         print x_coord
         print y_coord
         x_coord = x_coord.split("=")[1]
+
         str_x_coord = re.match(r'^-?\d+(\.\d+)?$', x_coord).group()
         str_y_coord = re.match(r'^-?\d+(\.\d+)?$', y_coord).group()
         if( str_x_coord and  str_y_coord):
             #print "inside if"
-            x_pos = int(str_x_coord)
-            y_pos = int(str_y_coord)
+            x_pos = float(str_x_coord)
+            y_pos = float(str_y_coord)
             #print x_pos
             #print y_pos
             try:

@@ -25,7 +25,7 @@ public class WelcomeActivity extends ActionBarActivity {
                 String ip_address = String.valueOf(get_ip.getText());
                 Log.d("ip address1", ip_address);
                 new ConnectTask().execute(ip_address);
-                Intent myIntent = new Intent(WelcomeActivity.this, MainActivity.class);
+                Intent myIntent = new Intent(WelcomeActivity.this, MouseActivity.class);
                 //myIntent.putExtra("key", value); //Optional parameters
                 startActivity(myIntent);
                 finish();
