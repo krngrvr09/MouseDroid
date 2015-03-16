@@ -3,13 +3,21 @@ import sys
 import re
 from pymouse import PyMouse
 from pykeyboard import PyKeyboard
+import netifaces as ni
 # Create a TCP/IP socket
 m= PyMouse()
 k= PyKeyboard()
+try:
+	ni.ifaddresses('wlan0')
+	ip = ni.ifaddresses('wlan0')[2][0]['addr']
+except KeyError:
+	ni.ifaddresses('eth0')
+	ip = ni.ifaddresses('eth0')[2][0]['addr']
+
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # Bind the socket to the port
-server_address = ('192.168.54.217', 10000)
+server_address = (ip, 10000)
 print >>sys.stderr, 'starting up on %s port %s' % server_address
 sock.bind(server_address)
 
