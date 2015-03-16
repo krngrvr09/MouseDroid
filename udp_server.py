@@ -9,7 +9,7 @@ k= PyKeyboard()
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # Bind the socket to the port
-server_address = ('192.168.54.217', 10000)
+server_address = ('192.168.1.5', 10000)
 print >>sys.stderr, 'starting up on %s port %s' % server_address
 sock.bind(server_address)
 
