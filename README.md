@@ -1,7 +1,7 @@
 # MouseDroid
 Control the mouse pointer and keyboard with your android, wirelessly.
 
-This project uses a UDP server and client to communicate pointer positions and keyboard keystrokes.
+This project uses a UDP server and client to communicate pointer coordinates and keyboard keystrokes.
 
 Install the dependencies first.
 
