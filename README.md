@@ -1,15 +1,17 @@
 # MouseDroid
 Control the mouse pointer and keyboard with your android, wirelessly.
 
-This project uses a UDP server and client to communicate pointer coordinates and keyboard keystrokes.
+This project requires you to have a ``droidserver`` running on your machine, and an android app that you can use as a touch pad.
 
-Install the dependencies first.
+The android app will be uploaded to Play Store soon. Till then you can use the apk [here](https://github.com/krngrvr09/MouseDroid/blob/master/MoveMouse/app/app-release.apk).
 
-PyUserInput - https://github.com/SavinaRoja/PyUserInput
+You can install the server in 2 steps.
 
-Netifaces - https://pypi.python.org/pypi/netifaces/
+1. ``$ pip install mouse_droid``
+2. ``sudo pip install svn+https://svn.code.sf.net/p/python-xlib/code/trunk/``
 
-Run the python script to start the UDP Server.
+
+Run `` $ droidserver`` to start the UDP Server.
 
 When running the app, Enter the IP Address of the computer you want to connect to. And then start using it.
 
