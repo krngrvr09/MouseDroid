@@ -15,7 +15,7 @@
 from setuptools import setup
 
 setup(name='mouse_droid',
-      version='0.1.1',
+      version='0.1.2',
       description='Control Mouse via pointer',
       author='Karan Grover',
       author_email='krngrvr09@gmail.com',
