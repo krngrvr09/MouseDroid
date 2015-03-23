@@ -12,7 +12,7 @@
 #   classifiers = [],
 # )
 
-from distutils.core import setup
+from setuptools import setup
 
 setup(name='mouse_droid',
       version='0.1.1',
@@ -20,9 +20,13 @@ setup(name='mouse_droid',
       author='Karan Grover',
       author_email='krngrvr09@gmail.com',
       scripts=['mouse_droid/droidserver'],
+      install_requires=[
+        "PyUserInput >= 0.1.9",
+        "netifaces >= 0.10.4",
+  
+    ],
       dependency_links = [
-        'https://pypi.python.org/packages/source/n/netifaces/netifaces-0.10.4.tar.gz#md5=36da76e2cfadd24cc7510c2c0012eb1e',
-        'https://pypi.python.org/packages/source/P/PyUserInput/PyUserInput-0.1.9.tar.gz#md5=7a0decf373a67299301afe92c8772b01'
+      'svn+https://svn.code.sf.net/p/python-xlib/code/trunk/',
       ],
       url = 'https://github.com/krngrvr09/MouseDroid', # use the URL to the github repo
       download_url = 'https://github.com/krngrvr09/mouse_droid/tarball/0.1.1', # I'll explain this in a second
