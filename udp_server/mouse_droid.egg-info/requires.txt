@@ -1,0 +1,2 @@
+PyUserInput >= 0.1.9
+netifaces >= 0.10.4

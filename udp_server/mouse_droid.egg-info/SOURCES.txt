@@ -1,0 +1,7 @@
+setup.py
+mouse_droid/droidserver
+mouse_droid.egg-info/PKG-INFO
+mouse_droid.egg-info/SOURCES.txt
+mouse_droid.egg-info/dependency_links.txt
+mouse_droid.egg-info/requires.txt
+mouse_droid.egg-info/top_level.txt
